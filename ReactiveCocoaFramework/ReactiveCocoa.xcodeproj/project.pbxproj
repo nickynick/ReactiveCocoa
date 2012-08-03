@@ -154,6 +154,8 @@
 		A1FCC375156754A7008C9686 /* RACObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FCC371156754A7008C9686 /* RACObjCRuntime.m */; };
 		A1FCC3791567DED0008C9686 /* RACDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A1FCC3761567DED0008C9686 /* RACDelegateProxy.h */; };
 		A1FCC37B1567DED0008C9686 /* RACDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FCC3771567DED0008C9686 /* RACDelegateProxy.m */; };
+		D07E13DC15CB8A0B0015F20D /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = D07E13DA15CB899B0015F20D /* EXTKeyPathCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D07E13DD15CB8A0B0015F20D /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = D07E13DA15CB899B0015F20D /* EXTKeyPathCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -374,6 +376,7 @@
 		D07E13B615CB86C90015F20D /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
 		D07E13B715CB86C90015F20D /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		D07E13B815CB86C90015F20D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D07E13DA15CB899B0015F20D /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EXTKeyPathCoding.h; path = ../external/libextobjc/extobjc/EXTKeyPathCoding.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -513,6 +516,7 @@
 			isa = PBXGroup;
 			children = (
 				8809D6EB15B1F1E4007E32AA /* JRSwizzle */,
+				D07E13D915CB89620015F20D /* libextobjc */,
 				88CDF7BF15000FCE00163A9F /* Cocoa.framework */,
 				88CDF7DD15000FCF00163A9F /* SenTestingKit.framework */,
 				88CDF7C115000FCE00163A9F /* Other Frameworks */,
@@ -730,6 +734,14 @@
 			path = "Mac OS X";
 			sourceTree = "<group>";
 		};
+		D07E13D915CB89620015F20D /* libextobjc */ = {
+			isa = PBXGroup;
+			children = (
+				D07E13DA15CB899B0015F20D /* EXTKeyPathCoding.h */,
+			);
+			name = libextobjc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -777,6 +789,7 @@
 				88F5870615361C170084BD32 /* RACConnectableSubscribable+Private.h in Headers */,
 				A1FCC372156754A7008C9686 /* RACObjCRuntime.h in Headers */,
 				8809D6EE15B1F1EE007E32AA /* JRSwizzle.h in Headers */,
+				D07E13DC15CB8A0B0015F20D /* EXTKeyPathCoding.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +808,7 @@
 				A1FCC373156754A7008C9686 /* RACObjCRuntime.h in Headers */,
 				A1FCC3791567DED0008C9686 /* RACDelegateProxy.h in Headers */,
 				8809D6EF15B1F1EE007E32AA /* JRSwizzle.h in Headers */,
+				D07E13DD15CB8A0B0015F20D /* EXTKeyPathCoding.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

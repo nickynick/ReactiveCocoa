@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EXTKeyPathCoding.h"
 
-#define RAC_KEYPATH(object, property) ((void)(NO && ((void)object.property, NO)), @#property)
-#define RAC_KEYPATH_SELF(property) RAC_KEYPATH(self, property)
+#define RACAble(OBJECT, PROPERTY) \
+	({ \
+		__typeof__(OBJECT) obj = (OBJECT); \
+		[obj rac_subscribableForKeyPath:@keypath(obj.PROPERTY) onObject:self]; \
+	})
 
-#define RACAble(object, property) [object rac_subscribableForKeyPath:RAC_KEYPATH(object, property) onObject:self]
-#define RACAbleSelf(property) RACAble(self, property)
-#define RACAbleKeyPath(keyPath) [self rac_subscribableForKeyPath:keyPath onObject:self]
+#define RACAbleSelf(PROPERTY) RACAble(self, PROPERTY)
+#define RACAbleKeyPath(KEYPATH) [self rac_subscribableForKeyPath:KEYPATH onObject:self]
 
 @class RACSubscribable;
 
